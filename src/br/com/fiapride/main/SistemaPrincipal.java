@@ -17,13 +17,18 @@ public class SistemaPrincipal {
         Carro carro2 = new Carro("Toyota", "Corolla", 2020);
 
         System.out.println("Tentando acelerar carro 2 sem ligar");
-        carro2.acelerar(30); // inválido
+        carro2.acelerar(30);
 
-        System.out.println("--- Sistema FiapRide ---");
-        System.out.println("Carro 1: " + carro1.marca + " | Modelo: " + carro1.modelo + 
-                           " | Ano: " + carro1.ano + " | Velocidade: " + carro1.velocidade);
+        System.out.println("\n--- Sistema FiapRide ---");
 
-        System.out.println("Carro 2: " + carro2.marca + " | Modelo: " + carro2.modelo + 
-                           " | Ano: " + carro2.ano + " | Velocidade: " + carro2.velocidade);
+        System.out.println("Carro 1: " + carro1.getMarca() +
+                " | Modelo: " + carro1.getModelo() +
+                " | Ano: " + carro1.getAno() +
+                " | Velocidade: " + carro1.getVelocidade());
+
+        System.out.println("Carro 2: " + carro2.getMarca() +
+                " | Modelo: " + carro2.getModelo() +
+                " | Ano: " + carro2.getAno() +
+                " | Velocidade: " + carro2.getVelocidade());
     }
 }
