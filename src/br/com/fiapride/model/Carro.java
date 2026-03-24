@@ -4,14 +4,16 @@ public class Carro {
 
     private String marca;
     private String modelo;
+    private String placa;
     private int ano;
     private boolean ligado;
     private int velocidade;
 
     // Construtor
-    public Carro(String marca, String modelo, int ano) {
-        this.setMarca(marca);
-        this.setModelo(modelo);
+    public Carro(String marca, String modelo, int ano, String placa) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.placa = placa;
         this.setAno(ano);
         this.ligado = false;
         this.velocidade = 0;
@@ -27,6 +29,10 @@ public class Carro {
         return modelo;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
+
     public int getAno() {
         return ano;
     }
@@ -40,14 +46,6 @@ public class Carro {
     }
 
     // SETTERS (privados)
-
-    private void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    private void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
 
     private void setAno(int ano) {
         if (ano > 1885) {
